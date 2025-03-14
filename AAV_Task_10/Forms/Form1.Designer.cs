@@ -117,7 +117,6 @@ namespace AAV_Task_10
             this.label4.TabIndex = 6;
             this.label4.Text = "Нет аккаунта? Зарегистируйтесь";
             this.label4.Visible = false;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // Form1
             // 

@@ -33,6 +33,7 @@
             this.списокТоваровToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.продажиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.авторизоватьсяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.контактыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +54,7 @@
             this.списокТоваровToolStripMenuItem,
             this.продажиToolStripMenuItem,
             this.авторизоватьсяToolStripMenuItem,
+            this.контактыToolStripMenuItem,
             this.выходToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -72,20 +74,31 @@
             this.продажиToolStripMenuItem.Name = "продажиToolStripMenuItem";
             this.продажиToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.продажиToolStripMenuItem.Text = "Продажи";
+            this.продажиToolStripMenuItem.Visible = false;
+            this.продажиToolStripMenuItem.Click += new System.EventHandler(this.продажиToolStripMenuItem_Click);
             // 
             // авторизоватьсяToolStripMenuItem
             // 
             this.авторизоватьсяToolStripMenuItem.Name = "авторизоватьсяToolStripMenuItem";
             this.авторизоватьсяToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
             this.авторизоватьсяToolStripMenuItem.Text = "Авторизоваться";
+            this.авторизоватьсяToolStripMenuItem.Click += new System.EventHandler(this.авторизоватьсяToolStripMenuItem_Click);
+            // 
+            // контактыToolStripMenuItem
+            // 
+            this.контактыToolStripMenuItem.Name = "контактыToolStripMenuItem";
+            this.контактыToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.контактыToolStripMenuItem.Text = "Контакты";
+            this.контактыToolStripMenuItem.Click += new System.EventHandler(this.контактыToolStripMenuItem_Click);
             // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
             this.выходToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.выходToolStripMenuItem.Text = "Выход";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
-            // Form1
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -93,7 +106,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "Main";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -110,5 +123,6 @@
         private ToolStripMenuItem продажиToolStripMenuItem;
         private ToolStripMenuItem авторизоватьсяToolStripMenuItem;
         private ToolStripMenuItem выходToolStripMenuItem;
+        private ToolStripMenuItem контактыToolStripMenuItem;
     }
 }

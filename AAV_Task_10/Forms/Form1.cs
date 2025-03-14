@@ -14,10 +14,10 @@ namespace AAV_Task_10
 {
     public partial class Form1 : Form
     {
-        private AdminForm _adminForm;
-        public Form1(AdminForm adminForm)
+        private Main _mainForm;
+        public Form1(Main mainForm)
         {
-            _adminForm = adminForm;
+            _mainForm = mainForm;
             InitializeComponent();
         }
 
@@ -36,9 +36,9 @@ namespace AAV_Task_10
                     User? user = users.FirstOrDefault(p => p.Login == textBox1.Text && p.Password == textBox2.Text);
                     if (user != null)
                     {
-                        AdminForm adminform = new AdminForm(user);
+                        _mainForm.currentUser = user;
+                        _mainForm.EnabledButtonSells();
                         this.Hide();
-                        adminform.Show();
 
                     }
                     else
@@ -49,13 +49,6 @@ namespace AAV_Task_10
             {
                 MessageBox.Show("Не подключена БД", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-            Reg reg = new Reg();
-            this.Hide();
-            reg.Show();
         }
     }
 }

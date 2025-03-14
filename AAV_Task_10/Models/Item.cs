@@ -18,7 +18,10 @@ namespace AAV_Task_10.Models
         public User? OwnerItem { get; set; }
         public double EstimatedPrice { get; set; }
 
-        
+        public override string ToString()
+        {
+            return Name;
+        }
 
     }
 }
